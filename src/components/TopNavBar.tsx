@@ -3,7 +3,6 @@ import AppBar from '@mui/material/AppBar'
 import {
   Avatar,
   Box,
-  Button,
   Container,
   IconButton,
   Menu,
@@ -45,8 +44,11 @@ const ROUTES: Route[] = [
 ]
 
 const styles = {
+  appBar: { backgroundColor: 'transparent', boxShadow: 'none' },
   mobileNavContainer: { flexGrow: 1, display: { xs: 'flex', md: 'none' } },
-  navAvatarTitleContainer: { display: { md: 'flex', alignItems: 'center' } },
+  navAvatarTitleContainer: {
+    display: { md: 'flex', alignItems: 'center', color: '#64FFDA' },
+  },
   navAvatarContainer: { marginRight: 2, display: { xs: 'none', md: 'flex' } },
   navTitle: { xs: 'none', md: 'flex' },
   mobileNavMenu: { display: { xs: 'block', md: 'none' } },
@@ -56,11 +58,16 @@ const styles = {
   navRoutesContainer: { flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent: 'end' } },
   navRouteButton: {
     my: 2,
-    color: 'white',
+    fontFamily: 'Fira Code',
+    color: '#64FFDA',
     display: 'block',
     textDecoration: 'none',
-    fontSize: '20px',
+    fontSize: '16px',
     margin: '16px 20px',
+  },
+  resumeButton: {
+    // fontFamily: 'Fira Code',
+    // color: '#64FFDA',
   },
 }
 
@@ -76,22 +83,22 @@ function TopNavBar() {
   }
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={styles.appBar}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box className="nav-avatar-title-container" sx={styles.navAvatarTitleContainer}>
             <Box className="nav-avatar-container" sx={styles.navAvatarContainer}>
-              <Avatar alt="Brian Flannery" src="B" />
+              <Avatar
+                alt="Brian Flannery"
+                sx={{
+                  color: '#64FFDA',
+                  backgroundColor: '#0D1A2D',
+                  border: '1px solid #64FFDA',
+                }}
+              >
+                BF
+              </Avatar>
             </Box>
-            <Typography
-              className="nav-title"
-              variant="h6"
-              noWrap
-              component="a"
-              sx={styles.navTitle}
-            >
-              Web Dev
-            </Typography>
           </Box>
           {/*Mobile Nav*/}
           <Box className="mobile-nav-container" sx={styles.mobileNavContainer}>
@@ -136,20 +143,12 @@ function TopNavBar() {
             sx={styles.mobileNavAvatarTitleContainer}
           >
             <Box className="mobile-nav-avatar-container" sx={styles.mobileNavAvatarContainer}>
-              <Avatar alt="Brian Flannery" src="B" />
+              <Avatar alt="Brian Flannery">BF</Avatar>
             </Box>
-            <Typography
-              className="mobile-nav-avatar-text"
-              variant="h5"
-              noWrap
-              sx={styles.mobileNavAvatarText}
-            >
-              Web Dev
-            </Typography>
           </Box>
 
           <Box className="nav-routes-container" sx={styles.navRoutesContainer}>
-            {ROUTES.map((route) => (
+            {ROUTES.map((route, i) => (
               <Link
                 key={route.id}
                 to={route.route}

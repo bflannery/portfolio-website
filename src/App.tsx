@@ -5,6 +5,8 @@ import ErrorPage from './pages/ErrorPage'
 import Contact from './pages/Contact'
 import About from './pages/About'
 import Experience from './pages/Experience'
+import { CssBaseline, ThemeProvider } from '@mui/material'
+import mainTheme from './themes/main'
 
 const router = createBrowserRouter([
   {
@@ -29,7 +31,12 @@ const router = createBrowserRouter([
 ])
 
 function App() {
-  return <RouterProvider router={router} />
+  return (
+    <ThemeProvider theme={mainTheme}>
+      <CssBaseline />
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  )
 }
 
 export default App
