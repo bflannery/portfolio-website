@@ -55,24 +55,36 @@ function About() {
         </Typography>
         <Box className="social-container" sx={styles.socialContainer}>
           <Link
+            style={styles.socialLogo}
             href="https://www.linkedin.com/in/bflanneryatx/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={linkedinLogo} height={50} width={50} style={styles.socialLogo} />
-          </Link>
-          <Link href="https://github.com/bflannery" target="_blank" rel="noopener noreferrer">
-            <img src={githubLogo} height={55} width={55} style={styles.socialLogo} />
-          </Link>
-          <Link href="https://twitter.com/flanst1gram" target="_blank" rel="noopener noreferrer">
-            <img src={twitterLogo} height={50} width={50} style={styles.socialLogo} />
+            <img src={linkedinLogo} height={50} width={50} />
           </Link>
           <Link
+            href="https://github.com/bflannery"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={styles.socialLogo}
+          >
+            <img src={githubLogo} height={55} width={55} />
+          </Link>
+          <Link
+            href="https://twitter.com/flanst1gram"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={styles.socialLogo}
+          >
+            <img src={twitterLogo} height={50} width={50} />
+          </Link>
+          <Link
+            style={styles.socialLogo}
             href="https://www.instagram.com/flanst1gram/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={igLogo} height={50} width={50} style={styles.socialLogo} />
+            <img src={igLogo} height={50} width={50} />
           </Link>
         </Box>
         <Box sx={styles.bioHeadshotContainer}>

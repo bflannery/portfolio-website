@@ -66,10 +66,7 @@ const styles = {
     fontSize: '16px',
     margin: '16px 20px',
   },
-  resumeButton: {
-    // fontFamily: 'Fira Code',
-    // color: '#64FFDA',
-  },
+  resumeButton: { marginLeft: '10px' },
 }
 
 function TopNavBar() {
@@ -167,7 +164,7 @@ function TopNavBar() {
           </Box>
 
           <Box className="nav-routes-container" sx={styles.navRoutesContainer}>
-            {ROUTES.map((route, i) => (
+            {ROUTES.map((route) => (
               <Link
                 key={route.id}
                 to={route.route}
@@ -181,7 +178,7 @@ function TopNavBar() {
           <Button
             variant="outlined"
             color="secondary"
-            sx={{ marginLeft: '10px' }}
+            sx={styles.resumeButton}
             onClick={onResumeButtonClick}
           >
             Resume

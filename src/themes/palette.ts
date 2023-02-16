@@ -19,5 +19,4 @@ export const green = {
 }
 
 export const white = '#e6f1ff'
-export const pink = '#f57dff'
 export const blue = '#57cbff'
