@@ -4,14 +4,18 @@ import { slate } from '../themes/palette'
 import reactLogo from '../images/logos/react-logo.png'
 import graphqlLogo from '../images/logos/graphql-logo.png'
 import reduxLogo from '../images/logos/redux-logo.png'
+import jsLogo from '../images/logos/javascript-logo.png'
 import typescriptLogo from '../images/logos/typescript-logo.png'
 import pythonLogo from '../images/logos/python-logo.png'
 import postgresLogo from '../images/logos/postgres-logo.png'
 import mysqlLogo from '../images/logos/mysql-logo.png'
+import nodeLogo from '../images/logos/node-logo.png'
 import awsLogo from '../images/logos/aws-logo.png'
+import stripeLogo from '../images/logos/stripe-logo.png'
 import dockerLogo from '../images/logos/docker-logo.png'
 import syncPortal from '../images/screenshots/sync-computing-dashboard.png'
 import loudcrowdPortal from '../images/screenshots/loudcrowd-dashboard.png'
+import packratPortal from '../images/screenshots/packrat-dashboard.png'
 import unionPortal from '../images/screenshots/union-login.png'
 
 const styles = {
@@ -32,7 +36,6 @@ const styles = {
   },
   companiesContainer: {
     flexGrow: 3,
-    // borderLeft: `1px solid ${slate[100]}`,
   },
   companyContainer: {
     display: 'flex',
@@ -60,6 +63,7 @@ const styles = {
   },
   techLogo: {
     marginRight: '5px',
+    marginLeft: '5px',
   },
   companyImageContainer: {
     display: 'flex',
@@ -74,27 +78,10 @@ const styles = {
 function Experience() {
   return (
     <Box>
-      <Typography variant="h2" color="primary" sx={styles.title}>
+      <Typography variant="h4" color="primary" sx={styles.title}>
         Experience
       </Typography>
       <Box className="experience-container" sx={styles.experienceContainer}>
-        {/*<Box className="timeline-container" sx={styles.timelineContainer}>*/}
-        {/*  <Box id="sync-timeline" sx={styles.companyDateRange}>*/}
-        {/*    <Typography variant="h6" color="secondary">*/}
-        {/*      2022 - Present*/}
-        {/*    </Typography>*/}
-        {/*  </Box>*/}
-        {/*  <Box id="loudcrowd-timeline" sx={styles.companyDateRange}>*/}
-        {/*    <Typography variant="h6" color="secondary">*/}
-        {/*      2020 - 2022*/}
-        {/*    </Typography>*/}
-        {/*  </Box>*/}
-        {/*  <Box id="union-timeline" sx={styles.companyDateRange}>*/}
-        {/*    <Typography variant="h6" color="secondary">*/}
-        {/*      2017 - 2020*/}
-        {/*    </Typography>*/}
-        {/*  </Box>*/}
-        {/*</Box>*/}
         <Box className="companies-container" sx={styles.companiesContainer}>
           <Box id="current" className="company-container" sx={styles.companyContainer}>
             <Box id="sync-timeline" sx={styles.companyDateRange}>
@@ -109,8 +96,7 @@ function Experience() {
                     Sync Computing
                   </Typography>
                   <Typography variant="body1" color="primary" sx={styles.companyDesc}>
-                    Lower cloud costs, accelerate runtimes, and simplify infrastructure for Apache
-                    Spark on AWS, with no code changes
+                    Senior Fullstack Engineer
                   </Typography>
                 </Box>
                 <Box sx={styles.companyRoles}>
@@ -136,17 +122,58 @@ function Experience() {
                   <img src={reduxLogo} height={25} width={25} style={styles.techLogo} />
                   <img src={typescriptLogo} height={25} width={35} style={styles.techLogo} />
                   <img src={pythonLogo} height={25} width={25} style={styles.techLogo} />
-                  <img
-                    src={postgresLogo}
-                    height={25}
-                    width={25}
-                    style={{ ...styles.techLogo, marginRight: '10px' }}
-                  />
+                  <img src={postgresLogo} height={25} width={25} style={styles.techLogo} />
                   <img src={awsLogo} height={25} width={35} style={styles.techLogo} />
                 </Box>
               </Box>
               <Box sx={styles.companyImageContainer}>
                 <img src={syncPortal} height={300} width={550} />
+              </Box>
+            </Box>
+            <Divider sx={styles.divider} />
+          </Box>
+          <Box id="hookbang" className="company-container" sx={styles.companyContainer}>
+            <Box id="hookbang-timeline" sx={styles.companyDateRange}>
+              <Typography variant="h6" color="secondary">
+                2020 - Present
+              </Typography>
+            </Box>
+            <Box className="company-details-container" sx={styles.companyDetailsContainer}>
+              <Box className="company-info-container" sx={styles.companyInfoContainer}>
+                <Box sx={styles.companyTitleDescContainer}>
+                  <Typography variant="h5" color="secondary">
+                    Hookbang - Packrat
+                  </Typography>
+                  <Typography variant="body1" color="primary" sx={styles.companyDesc}>
+                    Contract Software Engineer
+                  </Typography>
+                </Box>
+                <Box sx={styles.companyRoles}>
+                  <Typography variant="body1" color="primary">
+                    - Manage and update legacy server-side Node.js codebase
+                  </Typography>
+                  <Typography variant="body1" color="primary">
+                    - Manage AWS infrastructure and deployments on Elastic Beanstalk.
+                  </Typography>
+                  <Typography variant="body1" color="primary">
+                    - Integrate PayPal and Stripe payment platforms for in-game purchasing
+                  </Typography>
+                </Box>
+                <Box sx={styles.techLogos}>
+                  <img src={jsLogo} height={25} width={25} style={styles.techLogo} />
+                  <img src={nodeLogo} height={25} width={25} style={styles.techLogo} />
+                  <img src={mysqlLogo} height={25} width={25} style={styles.techLogo} />
+                  <img src={awsLogo} height={25} width={35} style={styles.techLogo} />
+                  <img
+                    src={stripeLogo}
+                    height={25}
+                    width={35}
+                    style={{ ...styles.techLogo, marginLeft: '5px' }}
+                  />
+                </Box>
+              </Box>
+              <Box sx={styles.companyImageContainer}>
+                <img src={packratPortal} height={300} width={550} />
               </Box>
             </Box>
             <Divider sx={styles.divider} />
@@ -164,8 +191,7 @@ function Experience() {
                     Loudcrowd
                   </Typography>
                   <Typography variant="body1" color="primary" sx={styles.companyDesc}>
-                    The only brand ambassador marketing platform to measure your UGC and find loyal
-                    Instagram brand ambassadors within your customers.
+                    Fullstack Software Engineer
                   </Typography>
                 </Box>
                 <Box sx={styles.companyRoles}>
@@ -182,7 +208,7 @@ function Experience() {
                   </Typography>
                   <Typography variant="body1" color="primary">
                     - Train and mentor junior developers and engineers, working to improve overall
-                    team performance..
+                    team performance.
                   </Typography>
                 </Box>
                 <Box sx={styles.techLogos}>
@@ -191,13 +217,14 @@ function Experience() {
                   <img src={typescriptLogo} height={25} width={35} style={styles.techLogo} />
                   <img src={pythonLogo} height={25} width={25} style={styles.techLogo} />
                   <img src={dockerLogo} height={25} width={25} style={styles.techLogo} />
-                  <img
-                    src={postgresLogo}
-                    height={25}
-                    width={25}
-                    style={{ ...styles.techLogo, marginRight: '10px' }}
-                  />
+                  <img src={postgresLogo} height={25} width={25} style={styles.techLogo} />
                   <img src={awsLogo} height={25} width={35} style={styles.techLogo} />
+                  <img
+                    src={stripeLogo}
+                    height={25}
+                    width={35}
+                    style={{ ...styles.techLogo, marginLeft: '5px' }}
+                  />
                 </Box>
               </Box>
               <Box sx={styles.companyImageContainer}>
@@ -219,8 +246,7 @@ function Experience() {
                     Union
                   </Typography>
                   <Typography variant="body1" color="primary" sx={styles.companyDesc}>
-                    The first POS built exclusively for high volume high touch venues and their
-                    unique operating requirements.
+                    Fullstack Software Engineer
                   </Typography>
                 </Box>
                 <Box sx={styles.companyRoles}>
@@ -242,12 +268,7 @@ function Experience() {
                   <img src={reduxLogo} height={25} width={25} style={styles.techLogo} />
                   <img src={pythonLogo} height={25} width={25} style={styles.techLogo} />
                   <img src={dockerLogo} height={25} width={25} style={styles.techLogo} />
-                  <img
-                    src={mysqlLogo}
-                    height={25}
-                    width={35}
-                    style={{ ...styles.techLogo, marginRight: '10px' }}
-                  />
+                  <img src={mysqlLogo} height={25} width={35} style={styles.techLogo} />
                   <img src={awsLogo} height={25} width={35} style={styles.techLogo} />
                 </Box>
               </Box>

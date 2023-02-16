@@ -3,6 +3,7 @@ import AppBar from '@mui/material/AppBar'
 import {
   Avatar,
   Box,
+  Button,
   Container,
   IconButton,
   Menu,
@@ -82,6 +83,22 @@ function TopNavBar() {
     setAnchorElNav(null)
   }
 
+  const onResumeButtonClick = () => {
+    fetch('https://bf-web-dev-portfolio.s3.amazonaws.com/Brian_Flannery_Resume_2022.pdf').then(
+      (response) => {
+        response.blob().then((blob) => {
+          // Creating new object of PDF file
+          const fileURL = window.URL.createObjectURL(blob)
+          // Setting various property values
+          const alink = document.createElement('a')
+          alink.href = fileURL
+          alink.download = 'brian_flannery_resume.pdf'
+          alink.click()
+        })
+      },
+    )
+  }
+
   return (
     <AppBar position="static" sx={styles.appBar}>
       <Container maxWidth="xl">
@@ -159,6 +176,14 @@ function TopNavBar() {
               </Link>
             ))}
           </Box>
+          <Button
+            variant="outlined"
+            color="secondary"
+            sx={{ marginLeft: '10px' }}
+            onClick={onResumeButtonClick}
+          >
+            Resume
+          </Button>
         </Toolbar>
       </Container>
     </AppBar>
