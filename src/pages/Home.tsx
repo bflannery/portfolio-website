@@ -83,7 +83,8 @@ function Home() {
       <Box className="tech-logos" sx={styles.techLogos}>
         <Carousel
           indicators={false}
-          duration={2000}
+          interval={2000}
+          duration={500}
           navButtonsAlwaysVisible={false}
           navButtonsAlwaysInvisible={true}
         >

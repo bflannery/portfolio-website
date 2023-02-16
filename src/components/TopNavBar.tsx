@@ -105,16 +105,18 @@ function TopNavBar() {
         <Toolbar disableGutters>
           <Box className="nav-avatar-title-container" sx={styles.navAvatarTitleContainer}>
             <Box className="nav-avatar-container" sx={styles.navAvatarContainer}>
-              <Avatar
-                alt="Brian Flannery"
-                sx={{
-                  color: '#64FFDA',
-                  backgroundColor: '#0D1A2D',
-                  border: '1px solid #64FFDA',
-                }}
-              >
-                BF
-              </Avatar>
+              <Link to="/" style={{ textDecoration: 'none' }}>
+                <Avatar
+                  alt="Brian Flannery"
+                  sx={{
+                    color: '#64FFDA',
+                    backgroundColor: '#0D1A2D',
+                    border: '1px solid #64FFDA',
+                  }}
+                >
+                  BF
+                </Avatar>
+              </Link>
             </Box>
           </Box>
           {/*Mobile Nav*/}
