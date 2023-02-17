@@ -17,29 +17,34 @@ import dockerLogo from '../images/logos/docker-logo-250.png'
 const styles = {
   homeContainer: {
     display: 'flex',
+    flexDirection: { xs: 'column-reverse', md: 'row' },
     alignItems: 'center',
-    height: '100%',
+    height: { md: '100%' },
   },
   introContainer: {
     display: 'flex',
-    flexAlign: 'center',
     flexDirection: 'column',
-    width: '75%',
+    width: { md: '75%' },
+    marginTop: { xs: '40px' },
+    marginBottom: { xs: '10px', md: '20px' },
   },
   intro: {
     color: slate[100],
     marginRight: '24px',
-    marginBottom: '20px',
+    fontSize: { xs: '1.5rem', md: '3rem' },
   },
   introName: {
     color: green[500],
+    fontSize: { xs: '1.5rem', md: '3rem' },
   },
   introTagline: {
     color: slate[500],
     marginBottom: '30px',
+    fontSize: { xs: '1.5rem', md: '3rem' },
   },
   introDescription: {
     color: slate[500],
+    fontSize: { xs: '1rem', md: '1.25rem' },
   },
   techLogos: {
     minWidth: '250px',
@@ -64,17 +69,17 @@ function Home() {
     <Box className="home-root-container" sx={styles.homeContainer}>
       <Box className="intro-container" sx={styles.introContainer}>
         <Box display="flex">
-          <Typography variant="h3" color="primary" sx={styles.intro}>
+          <Typography variant="h5" color="primary" sx={styles.intro}>
             Hi, my name is
           </Typography>
-          <Typography variant="h3" color="primary" sx={styles.introName}>
+          <Typography variant="h5" color="primary" sx={styles.introName}>
             Brian.
           </Typography>
         </Box>
-        <Typography variant="h3" sx={styles.introTagline}>
+        <Typography variant="h6" sx={styles.introTagline}>
           I build things for the web.
         </Typography>
-        <Typography variant={'h6'} sx={styles.introDescription}>
+        <Typography variant={'body1'} sx={styles.introDescription}>
           I’m a fullstack software engineer specializing in building scalable web applications.
           Currently, I’m focused on customer-centered products for optimizing Databricks and Spark
           applications at SyncComputing.

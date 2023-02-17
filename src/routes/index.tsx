@@ -10,7 +10,7 @@ const styles = {
     height: '100%',
   },
   pageContainer: {
-    padding: '50px 100px',
+    padding: { xs: '50px 20px', md: '50px 100px' },
     height: '100%',
   },
   sideBar: {
@@ -35,7 +35,6 @@ export default function Root() {
           classNames="page"
           unmountOnExit
         >
-          {/*{isHome ? <Home /> : <Outlet />}*/}
           {() => (
             <Box ref={nodeRef} className="page" sx={styles.pageContainer}>
               {currentOutlet}

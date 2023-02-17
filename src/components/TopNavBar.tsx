@@ -1,18 +1,9 @@
 import * as React from 'react'
 import AppBar from '@mui/material/AppBar'
-import {
-  Avatar,
-  Box,
-  Button,
-  Container,
-  IconButton,
-  Menu,
-  MenuItem,
-  Toolbar,
-  Typography,
-} from '@mui/material'
+import { Avatar, Box, Button, Container, IconButton, Menu, MenuItem, Toolbar } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 import { Link } from 'react-router-dom'
+import { navy } from '../themes/palette'
 
 interface Route {
   id: string
@@ -20,7 +11,6 @@ interface Route {
   route: string
 }
 
-const pages = ['Home', 'About', 'Experience', 'Contact']
 const ROUTES: Route[] = [
   {
     id: 'home',
@@ -54,9 +44,16 @@ const styles = {
   navTitle: { xs: 'none', md: 'flex' },
   mobileNavMenu: { display: { xs: 'block', md: 'none' } },
   mobileNavAvatarTitleContainer: { display: { xs: 'flex', md: 'none' }, flexGrow: 1 },
-  mobileNavAvatarContainer: { marginRight: 2 },
   mobileNavAvatarText: { fontWeight: 500, display: 'flex', alignItems: 'center' },
   navRoutesContainer: { flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent: 'end' } },
+  mobileNavItem: {
+    backgroundColor: navy[500],
+  },
+  mobileNavButton: {
+    textDecoration: 'none',
+    fontFamily: 'Fira Code',
+    color: '#64FFDA',
+  },
   navRouteButton: {
     my: 2,
     fontFamily: 'Fira Code',
@@ -66,7 +63,7 @@ const styles = {
     fontSize: '16px',
     margin: '16px 20px',
   },
-  resumeButton: { marginLeft: '10px' },
+  resumeButton: { marginLeft: { md: '10px' } },
 }
 
 function TopNavBar() {
@@ -127,9 +124,14 @@ function TopNavBar() {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon className="mobile-nav-hamburger-icon" />
+              <MenuIcon className="mobile-nav-hamburger-icon" viewBox="0 0 30 30" />
             </IconButton>
             <Menu
+              MenuListProps={{
+                sx: {
+                  padding: 0,
+                },
+              }}
               className="mobile-nav-menu"
               anchorEl={anchorElNav}
               anchorOrigin={{
@@ -145,24 +147,24 @@ function TopNavBar() {
               onClose={handleCloseNavMenu}
               sx={styles.mobileNavMenu}
             >
-              {pages.map((page) => (
-                <MenuItem className="mobile-nav-menu-item" key={page} onClick={handleCloseNavMenu}>
-                  <Typography className="mobile-nav-menu-item-text" textAlign="center">
-                    {page}
-                  </Typography>
+              {ROUTES.map((route) => (
+                <MenuItem
+                  sx={styles.mobileNavItem}
+                  className="mobile-nav-menu-item"
+                  key={route.id}
+                  onClick={handleCloseNavMenu}
+                >
+                  <Link
+                    to={route.route}
+                    className="mobile-nav-menu-route"
+                    style={styles.mobileNavButton}
+                  >
+                    {route.title}
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <Box
-            className="mobile-nav-avatar-title-container"
-            sx={styles.mobileNavAvatarTitleContainer}
-          >
-            <Box className="mobile-nav-avatar-container" sx={styles.mobileNavAvatarContainer}>
-              <Avatar alt="Brian Flannery">BF</Avatar>
-            </Box>
-          </Box>
-
           <Box className="nav-routes-container" sx={styles.navRoutesContainer}>
             {ROUTES.map((route) => (
               <Link
