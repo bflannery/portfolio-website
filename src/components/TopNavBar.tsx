@@ -124,7 +124,7 @@ function TopNavBar() {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon className="mobile-nav-hamburger-icon" viewBox="0 0 30 30" />
+              <MenuIcon className="mobile-nav-hamburger-icon" viewBox="0 0 24 24" />
             </IconButton>
             <Menu
               MenuListProps={{
