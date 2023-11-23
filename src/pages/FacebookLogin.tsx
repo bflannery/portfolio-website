@@ -10,11 +10,6 @@ const FB = () => {
       onSuccess={(response) => {
         console.log('Login Success!', response)
       }}
-      scope={[
-        'email',
-        'public_profile',
-        'pages_show_list',
-      ].join(',')}
       onFail={(error) => {
         console.log('Login Failed!', error)
       }}
