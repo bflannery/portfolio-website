@@ -13,9 +13,6 @@ const FB = () => {
       scope={[
         'email',
         'public_profile',
-        'instagram_basic',
-        'instagram_manage_insights',
-        'pages_read_engagement',
         'pages_show_list',
       ].join(',')}
       onFail={(error) => {
