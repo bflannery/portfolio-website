@@ -6,7 +6,7 @@ import FacebookLogin from '@greatsumini/react-facebook-login'
 const FB = () => {
   return (
     <FacebookLogin
-      appId="2520247984842048"
+      appId="1432286387351640"
       onSuccess={(response) => {
         console.log('Login Success!', response)
       }}
