@@ -16,7 +16,7 @@ const FB = () => {
       onProfileSuccess={(response) => {
         console.log('Get Profile Success!', response)
       }}
-      scope="email,public_profile,pages_show_list"
+      scope="email,public_profile,pages_show_list,'instagram_basic','instagram_manage_insights',"
     />
   )
 }
