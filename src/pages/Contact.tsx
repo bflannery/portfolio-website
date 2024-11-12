@@ -54,7 +54,7 @@ function Contact() {
               For all inquiries, please email me at
             </Typography>
             <Typography variant="h4" color="primary" sx={styles.introName}>
-              bflannery66@gmail.com
+              brian@paradigmshiftdev.io
             </Typography>
           </Box>
           <Typography variant="h5" sx={styles.introTagline}>
