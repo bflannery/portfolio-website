@@ -9,7 +9,6 @@ import Experience from './pages/Experience'
 import { CssBaseline, ThemeProvider } from '@mui/material'
 import mainTheme from './themes/main'
 import Home from './pages/Home'
-import FacebookLogin from './pages/FacebookLogin'
 
 export const routes = [
   { path: '/', name: 'Home', element: <Home />, nodeRef: createRef<HTMLDivElement>() },
@@ -24,12 +23,6 @@ export const routes = [
     path: '/contact',
     name: 'Contact',
     element: <Contact />,
-    nodeRef: createRef<HTMLDivElement>(),
-  },
-  {
-    path: '/facebook/oauth',
-    name: 'Facebook Auth',
-    element: <FacebookLogin />,
     nodeRef: createRef<HTMLDivElement>(),
   },
 ]

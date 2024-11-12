@@ -45,6 +45,7 @@ const styles = {
   introDescription: {
     color: slate[500],
     fontSize: { xs: '1rem', md: '1.25rem' },
+    width: '75%',
   },
   techLogos: {
     minWidth: '250px',
@@ -80,9 +81,8 @@ function Home() {
           I build things for the web.
         </Typography>
         <Typography variant={'body1'} sx={styles.introDescription}>
-          I’m a fullstack software engineer specializing in building scalable web applications.
-          Currently, I’m focused on customer-centered products for optimizing Databricks and Spark
-          applications at SyncComputing.
+          I’m a fullstack software engineer specializing in building scalable web applications for
+          the cloud.
         </Typography>
       </Box>
       <Box className="tech-logos" sx={styles.techLogos}>

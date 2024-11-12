@@ -78,7 +78,7 @@ function TopNavBar() {
   }
 
   const onResumeButtonClick = () => {
-    fetch('https://bf-web-dev-portfolio.s3.amazonaws.com/Brian_Flannery_Resume_2023.pdf').then(
+    fetch('https://bf-web-dev-portfolio.s3.amazonaws.com/Brian_Flannery_Resume_2024.pdf').then(
       (response) => {
         response.blob().then((blob) => {
           // Creating new object of PDF file

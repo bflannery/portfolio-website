@@ -47,6 +47,7 @@ const styles = {
   },
   companyInfoContainer: {
     marginLeft: '20px',
+    minWidth: '750px',
   },
   companyTitleDescContainer: {
     marginBottom: '20px',
@@ -96,25 +97,26 @@ function Experience() {
                     Sync Computing
                   </Typography>
                   <Typography variant="body1" color="primary" sx={styles.companyDesc}>
-                    Senior Fullstack Engineer
+                    Staff Fullstack Engineer
                   </Typography>
                 </Box>
                 <Box sx={styles.companyRoles}>
                   <Typography variant="body1" color="primary">
-                    - Re-write front-end React app to more scalable approach following community
-                    standard and best practices.
+                    - Lead engineer on React based SaaS analytics and monitoring application
+                    providing enhanced user experience through implementing intuitive interfaces and
+                    responsive designs
                   </Typography>
                   <Typography variant="body1" color="primary">
-                    - Implement testing, code quality, and code coverage into codebase and CI/CD
-                    pipeline
+                    - Work with Data Science team to surface key metrics from customers Databricks
+                    workspace via various ingestion pipelines.
                   </Typography>
                   <Typography variant="body1" color="primary">
-                    - Provide technical support using knowledge of complex technology to solve
-                    problems and support new projects.
+                    - Ensure high reliability and performance of external API services using
+                    FastAPI, delivering robust and scalable solutions.
                   </Typography>
                   <Typography variant="body1" color="primary">
-                    - Review project specifications and design technology solutions that met or
-                    exceeded performance expectations.
+                    - Monitor API usage, analyze patterns, and implement optimizations for
+                    scalability with Datadog.
                   </Typography>
                 </Box>
                 <Box sx={styles.techLogos}>
@@ -128,52 +130,6 @@ function Experience() {
               </Box>
               <Box sx={styles.companyImageContainer}>
                 <img src={syncPortal} height={300} width={550} />
-              </Box>
-            </Box>
-            <Divider sx={styles.divider} />
-          </Box>
-          <Box id="hookbang" className="company-container" sx={styles.companyContainer}>
-            <Box id="hookbang-timeline" sx={styles.companyDateRange}>
-              <Typography variant="h6" color="secondary">
-                2020 - Present
-              </Typography>
-            </Box>
-            <Box className="company-details-container" sx={styles.companyDetailsContainer}>
-              <Box className="company-info-container" sx={styles.companyInfoContainer}>
-                <Box sx={styles.companyTitleDescContainer}>
-                  <Typography variant="h5" color="secondary">
-                    Hookbang - Packrat
-                  </Typography>
-                  <Typography variant="body1" color="primary" sx={styles.companyDesc}>
-                    Contract Software Engineer
-                  </Typography>
-                </Box>
-                <Box sx={styles.companyRoles}>
-                  <Typography variant="body1" color="primary">
-                    - Manage and update legacy server-side Node.js codebase
-                  </Typography>
-                  <Typography variant="body1" color="primary">
-                    - Manage AWS infrastructure and deployments on Elastic Beanstalk.
-                  </Typography>
-                  <Typography variant="body1" color="primary">
-                    - Integrate PayPal and Stripe payment platforms for in-game purchasing
-                  </Typography>
-                </Box>
-                <Box sx={styles.techLogos}>
-                  <img src={jsLogo} height={25} width={25} style={styles.techLogo} />
-                  <img src={nodeLogo} height={25} width={25} style={styles.techLogo} />
-                  <img src={mysqlLogo} height={25} width={25} style={styles.techLogo} />
-                  <img src={awsLogo} height={25} width={35} style={styles.techLogo} />
-                  <img
-                    src={stripeLogo}
-                    height={25}
-                    width={35}
-                    style={{ ...styles.techLogo, marginLeft: '5px' }}
-                  />
-                </Box>
-              </Box>
-              <Box sx={styles.companyImageContainer}>
-                <img src={packratPortal} height={300} width={550} />
               </Box>
             </Box>
             <Divider sx={styles.divider} />
@@ -196,7 +152,8 @@ function Experience() {
                 </Box>
                 <Box sx={styles.companyRoles}>
                   <Typography variant="body1" color="primary">
-                    - Automate and optimize high-volume media ingestion from Facebook API.
+                    - Automated and optimized high-volume media ingestion from Meta APIs to Postgres
+                    Databases using infrastructure as code to manage AWS resources
                   </Typography>
                   <Typography variant="body1" color="primary">
                     - Coordinate with other engineers to evaluate and improve software and hardware
@@ -207,8 +164,12 @@ function Experience() {
                     AWS infrastructure.
                   </Typography>
                   <Typography variant="body1" color="primary">
-                    - Train and mentor junior developers and engineers, working to improve overall
-                    team performance.
+                    - Built highly responsive, React based SaaS application using Auth0 to
+                    authenticate users for a secure experience
+                  </Typography>
+                  <Typography variant="body1" color="primary">
+                    - Implemented self-service subscription model using Stripe payments in app and
+                    server- side for end-to-end management
                   </Typography>
                 </Box>
                 <Box sx={styles.techLogos}>
